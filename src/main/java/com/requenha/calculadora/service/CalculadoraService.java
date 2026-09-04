@@ -18,5 +18,9 @@ public class CalculadoraService {
 		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "Subtração", resultado);
 	}
 	
-	public
+	public CalculadoraResposta multiplicar(CalculadoraRequisicao requisicao) {
+		double resultado = requisicao.getNumero1() * requisicao.getNumero2();
+		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "Multiplicação", resultado);
+	}
+	
 }
