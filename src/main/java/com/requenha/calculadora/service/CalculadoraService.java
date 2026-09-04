@@ -10,6 +10,13 @@ public class CalculadoraService {
 	
 	public CalculadoraResposta somar(CalculadoraRequisicao requisicao) {
 		double resultado = requisicao.getNumero1() + requisicao.getNumero2();
-		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "soma", resultado);
+		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "Soma", resultado);
 	}
+	
+	public CalculadoraResposta subtrair(CalculadoraRequisicao requisicao) {
+		double resultado = requisicao.getNumero1() - requisicao.getNumero2();
+		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "Subtração", resultado);
+	}
+	
+	public
 }
