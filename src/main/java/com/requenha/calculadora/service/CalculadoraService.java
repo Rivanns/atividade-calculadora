@@ -23,4 +23,12 @@ public class CalculadoraService {
 		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "Multiplicação", resultado);
 	}
 	
+	public CalculadoraResposta dividir(CalculadoraRequisicao requisicao) {
+		double resultado = 0;
+		
+		if (requisicao.getNumero2() != 0) {
+			resultado = requisicao.getNumero1()/ requisicao.getNumero2();
+		}
+		return new CalculadoraResposta(requisicao.getNumero1(), requisicao.getNumero2(), "Divisão", resultado);
+	}
 }
