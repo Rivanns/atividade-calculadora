@@ -14,10 +14,14 @@ import com.requenha.calculadora.service.CalculadoraService;
 @RequestMapping("/calculadora")
 public class CalculadoraController {
 	
+	
+	private final CalculadoraService calculadoraService;
+	
 	@Autowired
-	private CalculadoraService calculadoraService;
-	
-	
+	public CalculadoraController(CalculadoraService calculadoraService) {
+		this.calculadoraService = calculadoraService;
+	}
+
 	@PostMapping("/somar")
 	public CalculadoraResposta somar (@RequestBody CalculadoraRequisicao requisicao) {
 		return calculadoraService.somar(requisicao);
